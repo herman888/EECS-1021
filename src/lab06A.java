@@ -19,8 +19,32 @@ public class lab06A{
 
         int randomNumber = random.nextInt((x-y)+1) + y;
 
+        boolean guessIsWrong = true;
+        while (guessIsWrong){
 
-        System.out.print(randomNumber);
+
+            System.out.print("Enter your guess for the number");
+
+            int guess = scanner.nextInt();
+
+            if (guess != randomNumber){
+                if (randomNumber > guess){
+                    System.out.print("The target number is larger");
+                }
+                else if(randomNumber < guess){
+                    System.out.print("The target number is smaller");
+
+                }
+            }
+            else{
+                System.out.print("You got it");
+            }
+
+
+
+        }
+
+
 
 
 
